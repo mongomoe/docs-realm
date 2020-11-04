@@ -210,7 +210,7 @@ user, you can open a synced :ref:`{+realm+} <react-native-realms>`:
              // ...
              console.log(`Logged in with the user: ${user.identity}`);
              const config = {
-               schema: [TaskModel],
+               schema: [TaskSchema],
                sync: {
                  user: user, 
                  partitionValue: "myPartition",
