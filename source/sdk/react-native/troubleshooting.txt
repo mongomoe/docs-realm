@@ -1,0 +1,40 @@
+.. _react-native-migrating-from-stitch-to-realm:
+
+===============================================
+Upgrade from Stitch to Realm - React Native SDK
+===============================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+Overview
+--------
+Listed below are some issues you might run into while setting up a Realm {+app+}
+with React Native and solutions to those issues. Check out the :doc:`Getting Help </get-started/getting-help>` page 
+if you are running into issues that aren't listed here or need additional help.
+
+Chrome Debugging is slow
+------------------------
+We are aware of this. The reason for this is that since Realm is written in C++
+and runs native code, it has to run on the device/simulator. But given the
+zero-copy architecture, we need to send values in realm objects over the RPC
+wire every time you inspect an object that is stored in a Realm. We are
+investigating various potential solutions for this problem. If you want to keep
+track of it, you can follow the GitHub issue.
+
+
+Crash Reporting
+---------------
+We encourage you to use a crash reporter in your application. Many Realm
+operations could potentially fail at runtime (like any other disk IO), so
+collecting crash reports from your application will help identify areas where
+either you (or us) can improve error handling and fix crashing bugs. Most
+commercial crash reporters have the option of collecting logs. We strongly
+encourage you to enable this feature. Realm logs metadata information (but no
+user data) when throwing exceptions and in irrecoverable situations, and these
+messages can help debug when things go wrong.
