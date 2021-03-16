@@ -18,7 +18,7 @@ MongoDB Realm React Native SDK
    Javascript SDK Reference Manual <https://docs.mongodb.com/realm-sdks/js/>
    Upgrade from Stitch to Realm </sdk/react-native/migrate>
    Release Notes <https://github.com/realm/realm-js/releases>
-   Troubleshooting </sdk/react-native/getting-help>
+   Troubleshooting </sdk/react-native/troubleshooting>
    
 The {+service+} React Native SDK enables client applications using the
 `React Native <https://facebook.github.io/react-native/>`__ framework for
